@@ -1,0 +1,74 @@
+
+.containerr {
+    height: 100vh;
+    display: flex;
+    background-image: url(https://img.freepik.com/premium-photo/blurred-medical-store-background-white-defocused-business-interior-modern-pharmacy-s-generative-ai_874904-42478.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer {
+    max-width: 400px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Transparent background */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+
+.formContainer form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer h3 {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #1877f2;
+}
+
+.btn-primary {
+    padding: 12px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #1877f2;
+    color: #1877f2;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #1877f2;
+    color: #fff;
+}
+
+.alert {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 12px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

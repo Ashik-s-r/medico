@@ -1,0 +1,73 @@
+/* add.css */
+
+.addpost-body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.addpost-containerrr {
+    height: 100vh;
+    display: flex;
+    background-image: url(https://i.guim.co.uk/img/media/20491572b80293361199ca2fc95e49dfd85e1f42/0_236_5157_3094/master/5157.jpg?width=620&quality=85&auto=format&fit=max&s=4f5c56d9bbc92d672fbb6c17283fcde4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.addpost-formContainer {
+    max-width: 400px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Transparent background */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.addpost-formContainer form {
+    display: flex;
+    flex-direction: column;
+}
+
+.addpost-formContainer h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.addpost-form-group {
+    margin-bottom: 15px;
+}
+
+.addpost-form-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.addpost-form-control {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+}
+
+.addpost-form-control:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 5px rgba(24, 119, 242, 0.5);
+}
+
+.addpost-btn-primary {
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #1877f2;
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.addpost-btn-primary:hover {
+    background-color: #0e5cb4;
+}
