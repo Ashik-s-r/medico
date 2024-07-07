@@ -1,7 +1,8 @@
-import { NavLink, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { removeUser } from "./store/authSlice";
+import React from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeUser } from './store/authSlice';
 
 function Navbar() {
     const user = useSelector((store) => store.auth.user);
@@ -14,16 +15,16 @@ function Navbar() {
                 'https://medicalstore.mashupstack.com/api/logout',
                 {},
                 {
-                    headers: { 'Authorization': `Bearer ${user.token}` }
+                    headers: { Authorization: `Bearer ${user.token}` },
                 }
             )
-            .then(() => {
-                dispatch(removeUser());
-                navigate('/login');
-            })
-            .catch(error => {
-                console.error('Logout error:', error);
-            });
+                .then(() => {
+                    dispatch(removeUser());
+                    navigate('/login');
+                })
+                .catch((error) => {
+                    console.error('Logout error:', error);
+                });
         }
     };
 
@@ -36,8 +37,8 @@ function Navbar() {
                 <button
                     className="navbar-toggler"
                     type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
+                    data-toggle="collapse"
+                    data-target="#navbarNav"
                     aria-controls="navbarNav"
                     aria-expanded="false"
                     aria-label="Toggle navigation"
@@ -52,11 +53,13 @@ function Navbar() {
                             </NavLink>
                         </li>
                         {user ? (
-                            <li className="nav-item">
-                                <button className="nav-link btn btn-link" onClick={logoutUser}>
-                                    Logout
-                                </button>
-                            </li>
+                            <>
+                                <li className="nav-item">
+                                    <button className="nav-link btn btn-link" onClick={logoutUser}>
+                                        Logout
+                                    </button>
+                                </li>
+                            </>
                         ) : (
                             <li className="nav-item">
                                 <NavLink to="/login" className="nav-link" activeClassName="active">

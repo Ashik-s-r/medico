@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUser } from "../store/authSlice";
 import Navbar from "../navebar";
@@ -72,6 +73,9 @@ function Login() {
                                 Login
                             </button>
                         </div>
+                        <p>
+                            Don't have an account? <Link to="/">Signup here</Link>
+                        </p>
                     </form>
                     {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
                 </div>

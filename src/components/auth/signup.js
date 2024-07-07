@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../navebar";
@@ -87,6 +88,9 @@ function Signup() {
                                 Sign Up
                             </button>
                         </div>
+                        <p>
+                            Already have an account? <Link to="/login">Login here</Link>
+                        </p>
                     </form>
                     {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
                 </div>
